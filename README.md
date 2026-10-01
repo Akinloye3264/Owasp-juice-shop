@@ -3,18 +3,26 @@
 A guided cybersecurity assessment of a local OWASP Juice Shop training application.
 
 ## Scope and status
-The group lead selected 12 distinct challenges from the supplied walkthrough, four per member. Score Board is shared preparation. This is a selected lab assessment, not a claim to have completed the entire walkthrough. No separate marking rubric was supplied.
+The group allocation covers 16 vulnerability topic sections, divided 6/5/5. Score Board is shared preparation. The number of required challenges within each section remains subject to the assignment scope.
 
-**Member 1's four practical challenges are confirmed solved in screenshots shown during the session. Members 2 and 3 are pending.** All eight Member 1 evidence screenshots are saved, captioned, and embedded in the report and corresponding findings.
-
-| Owner | Challenges | Status |
+| Member | Sections | Current evidence |
 |---|---|---|
-| Member 1 — group lead | Login Admin; Admin Section; Password Strength; View Basket | Practical work complete |
-| Member 2 | DOM XSS; Reflected XSS; Zero Stars; Repetitive Registration | Pending |
-| Member 3 | Confidential Document; Exposed Metrics; Error Handling; Forgotten Developer Backup | Pending |
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | Four challenges solved across three sections; three sections have no recorded tests. |
+| Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
+| Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
+
+Member 1 has four completed findings across three sections. All eight evidence images are saved and embedded; the expanded section allocation remains in progress.
+
+## Sections and challenges
+A section is a vulnerability topic containing several individual hacking challenges. A challenge is one Score Board objective; it does not universally have sub-challenges. Some challenges have an associated coding exercise with two phases, **Find It** and **Fix It**. Hints, tutorials, and star ratings are guidance and difficulty indicators, not extra hacking challenges. Bonus objectives can appear as separate Score Board challenges.
+
+The allocation covers all 16 topic sections, with Score Board as shared preparation. It does not establish that every challenge or coding exercise must be completed. No school brief specifying that requirement has been supplied. Each member must inventory the challenges in their sections against their running instance and record which are selected, solved, pending, or unavailable. Do not mark a whole section complete after one challenge unless the agreed assessment scope justifies that status.
+
+[Coding challenge explanation](https://help.owasp-juice.shop/appendix/code-snippets.html) and [challenge tracking](https://help.owasp-juice.shop/part1/challenges.html).
 
 ## Documentation
 - [Combined assessment report](docs/final-report.md)
+- [Member 1 assignment](docs/member-1-tasks.md)
 - [Member 2 assignment](docs/member-2-tasks.md)
 - [Member 3 assignment](docs/member-3-tasks.md)
 - [Contribution and submission checklist](docs/contributions.md)

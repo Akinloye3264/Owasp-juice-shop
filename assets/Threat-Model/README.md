@@ -5,11 +5,15 @@ Review the supplied [Threat Model Report](https://github.com/Los-merengue/Walkth
 
 This file is the group's review and mapping, not a copy of that report and not a claim that the group authored its diagram. Treat the source's attack scenarios and severity labels as hypotheses to review, not evidence that each vulnerability has been tested. Its Internet-facing asset description also differs from this group's localhost lab deployment.
 
-## What each member must do
-- Member 1: Map authentication and authorization findings to affected assets and trust boundaries. Initial mapping is provided below; review it against the write-ups.
-- Member 2: Add mappings for XSS and validation findings after testing. Explain how untrusted input reaches a browser execution or server validation boundary.
-- Member 3: Add mappings for exposure/configuration findings after testing and compile the group's remediation priorities.
-- Group lead: Include a short reviewed-model summary in the final report. Preserve source attribution; label changed assumptions and untested threats.
+## Section ownership
+
+| Member | Sections | Current evidence |
+|---|---|---|
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | Four challenges solved across three sections; three sections have no recorded tests. |
+| Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
+| Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
+
+Each member maps their verified findings to assets, flows, trust boundaries, threat categories, and controls. Member 3 combines remediation priorities. The lead reviews assumptions and integrates the mapping into the final report.
 
 ## Initial mapping
 These are the group's analytical mappings, not quotations or exact copies of source threat rows.
@@ -24,4 +28,4 @@ These are the group's analytical mappings, not quotations or exact copies of sou
 | Member 3 findings | To be documented after testing | Exposure/configuration mappings pending | Not yet tested by group | To be supported by results |
 
 ## Review deliverable
-Complete this table with the remaining eight findings. Explain which model assumptions fit the observed lab, which are unverified, and which lie outside the selected 12-challenge scope. There is no need to execute every threat in the source model or add extra challenges merely to fill every STRIDE category. Do not report hypothesized phishing, denial of service, blockchain, or other untested scenarios as completed work.
+Extend this table with verified findings from all 16 allocated sections. Explain which model assumptions fit the observed lab, which are unverified, and which lie outside the agreed challenge scope within the 16 assigned sections. There is no need to execute every threat in the source model or add extra challenges merely to fill every STRIDE category. Do not report hypothesized phishing, denial of service, blockchain, or other untested scenarios as completed work.

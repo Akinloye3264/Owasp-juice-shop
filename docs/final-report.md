@@ -2,15 +2,15 @@
 
 **Group:** BoyCode  
 **Assessment date:** 1 October 2026  
-**Status:** Member 1 results documented; Member 2 and Member 3 work pending.
+**Status:** Four Member 1 findings documented; expanded section coverage for all members is in progress.
 
 ## Executive summary
-The group selected 12 challenges to study authentication, access control, input validation, cross-site scripting, information exposure, and configuration weaknesses in a deliberately vulnerable local application. Member 1 completed four challenges: Login Admin, Admin Section, Password Strength, and View Basket. Screenshots reviewed in the session confirm completion. All eight Member 1 evidence screenshots are saved and captioned below and in the corresponding findings.
+The group allocated all 16 vulnerability topic sections among three members to study authentication, access control, input validation, cross-site scripting, information exposure, and configuration weaknesses in a deliberately vulnerable local application. Member 1 completed four challenges: Login Admin, Admin Section, Password Strength, and View Basket. Screenshots reviewed in the session confirm completion. All eight Member 1 evidence screenshots are saved and captioned below and in the corresponding findings.
 
 These results demonstrate an administrator login bypass, access to the administrator interface after compromise, authentication with a predictable administrator password, and a basket-identifier manipulation challenge. Admin Section is documented as privileged-interface access, not independent proof of a role-check bypass.
 
 ## Scope and boundaries
-Testing targeted Juice Shop 20.2.0 at localhost:3000 inside Kali Linux running in Oracle VirtualBox. Each teammate is to use their own lab instance. No external production systems were included. Four challenges per member were selected by the group lead from the supplied walkthrough; Score Board is shared orientation. The project does not claim comprehensive coverage or completion of the full guide.
+Testing targeted Juice Shop 20.2.0 at localhost:3000 inside Kali Linux running in Oracle VirtualBox. Each teammate is to use their own lab instance. No external production systems were included. The allocation is six sections for Member 1 and five each for Members 2 and 3; Score Board is shared orientation. Required challenge counts per section have not been established by a school brief. The project does not claim comprehensive coverage or completion of the full guide.
 
 ## Methodology
 1. Install the application and establish that it loads.
@@ -68,11 +68,22 @@ No formal CVSS scores are assigned: the session did not gather the evidence need
 
 **E07:** Final Score Board shows Login Admin, Admin Section, Password Strength, and View Basket with green solved indicators.
 
-## Remaining group work
-Member 2: DOM XSS, Reflected XSS, Zero Stars, Repetitive Registration.  
-Member 3: Confidential Document, Exposed Metrics, Error Handling, Forgotten Developer Backup.
+## Section allocation and remaining work
 
-Their findings must be added only after actual testing and review. See the individual task sheets.
+| Member | Sections | Current evidence |
+|---|---|---|
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | Four challenges solved across three sections; three sections have no recorded tests. |
+| Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
+| Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
+
+## Sections and challenges
+A section is a vulnerability topic containing several individual hacking challenges. A challenge is one Score Board objective; it does not universally have sub-challenges. Some challenges have an associated coding exercise with two phases, **Find It** and **Fix It**. Hints, tutorials, and star ratings are guidance and difficulty indicators, not extra hacking challenges. Bonus objectives can appear as separate Score Board challenges.
+
+The allocation covers all 16 topic sections, with Score Board as shared preparation. It does not establish that every challenge or coding exercise must be completed. No school brief specifying that requirement has been supplied. Each member must inventory the challenges in their sections against their running instance and record which are selected, solved, pending, or unavailable. Do not mark a whole section complete after one challenge unless the agreed assessment scope justifies that status.
+
+[Coding challenge explanation](https://help.owasp-juice.shop/appendix/code-snippets.html) and [challenge tracking](https://help.owasp-juice.shop/part1/challenges.html).
+
+See [Member 1](member-1-tasks.md), [Member 2](member-2-tasks.md), and [Member 3](member-3-tasks.md) assignments for source objectives and deliverables.
 
 ## Remediation priorities
 The [threat-model review](../assets/Threat-Model/README.md) relates observed findings to assets, trust boundaries, and threat categories in the supplied model. The source model is background analysis, not experimental evidence. Member 1 mappings are drafted; members 2 and 3 must add theirs after testing. No additional challenges are required solely to cover all source-model threats.
@@ -92,7 +103,7 @@ The [threat-model review](../assets/Threat-Model/README.md) relates observed fin
 - Teammate findings remain pending.
 
 ## Conclusion
-Member 1's practical allocation is complete. The findings illustrate why parameterized queries, strong authentication, and server-side authorization are necessary. The group submission remains incomplete until the other eight findings are performed, documented, and reviewed.
+Member 1's original four-challenge allocation is complete; the expanded six-section allocation remains in progress. The findings illustrate why parameterized queries, strong authentication, and server-side authorization are necessary. The group submission remains incomplete until the agreed challenge scope across the 16 sections is tested, documented, and reviewed.
 
 ## Supporting material
 [Evidence register](../evidence/README.md) · [Contributions](contributions.md) · [References](../references.md)

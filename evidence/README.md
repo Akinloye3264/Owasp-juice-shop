@@ -13,6 +13,7 @@ All eight Member 1 screenshots are saved in `evidence/member-1/`. They were extr
 | E05 (saved) | [05-view-basket-bid-6.png](member-1/05-view-basket-bid-6.png) | Firefox Storage panel displaying the original session-storage bid value 6. |
 | E06 (saved) | [06-view-basket-bid-5.png](member-1/06-view-basket-bid-5.png) | Firefox Storage panel displaying edited bid value 5. This image alone does not prove cross-user access. |
 | E07 (saved) | [07-member-1-all-four-solved.png](member-1/07-member-1-all-four-solved.png) | Final Score Board showing Login Admin, Admin Section, Password Strength, and View Basket all green. Primary completion summary. |
+| E12 (saved) | [12-bjoerns-favorite-pet-success.png](member-1/12-bjoerns-favorite-pet-success.png) | Forgot Password page with Bjoern's Favorite Pet success banner and “Your password was successfully changed.” Score Board card not in this shot. |
 
 ## Screenshot gallery
 
@@ -47,6 +48,10 @@ All eight Member 1 screenshots are saved in `evidence/member-1/`. They were extr
 ![member 1 all four solved](member-1/07-member-1-all-four-solved.png)
 
 **E07:** Final Score Board shows Login Admin, Admin Section, Password Strength, and View Basket with green solved indicators.
+
+![Bjoern's Favorite Pet success](member-1/12-bjoerns-favorite-pet-success.png)
+
+**E12:** Forgot Password page confirms Bjoern's Favorite Pet solved. Score Board confirmation for this card is still needed.
 
 ## Capture and publication checklist
 - Preserve readable URLs, challenge names, and success indicators.
