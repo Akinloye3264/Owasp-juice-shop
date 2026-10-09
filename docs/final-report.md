@@ -2,10 +2,10 @@
 
 **Group:** BoyCode  
 **Assessment date:** 1 October 2026  
-**Status:** Four Member 1 findings documented; expanded section coverage for all members is in progress.
+**Status:** 16 Member 1 findings documented; 18 objectives confirmed and 28 of 46 listed Member 1 objectives remain unconfirmed.
 
 ## Executive summary
-The group allocated all 16 vulnerability topic sections among three members to study authentication, access control, input validation, cross-site scripting, information exposure, and configuration weaknesses in a deliberately vulnerable local application. Member 1 completed four challenges: Login Admin, Admin Section, Password Strength, and View Basket. Screenshots reviewed in the session confirm completion. All eight Member 1 evidence screenshots are saved and captioned below and in the corresponding findings.
+The group allocated all 16 vulnerability topic sections among three members to study authentication, access control, input validation, cross-site scripting, information exposure, and configuration weaknesses in a deliberately vulnerable local application. Member 1 confirmed 18 objectives across Broken Authentication, Broken Access Control, and Injection, with 16 documented findings. The remaining objectives are unconfirmed, unavailable, or not yet tested.
 
 These results demonstrate an administrator login bypass, access to the administrator interface after compromise, authentication with a predictable administrator password, and a basket-identifier manipulation challenge. Admin Section is documented as privileged-interface access, not independent proof of a role-check bypass.
 
@@ -35,6 +35,7 @@ The group opened `http://localhost:3000/#/score-board` to view the challenge cat
 | [F02 Admin Section](../findings/member-1/02-admin-section.md) | Administrator interface accessible after admin login | Server-side role checks and correction of the login compromise |
 | [F03 Password Strength](../findings/member-1/03-password-strength.md) | Existing predictable admin credential successfully used | Strong unique passwords, common-password blocking, MFA |
 | [F04 View Basket](../findings/member-1/04-view-basket.md) | bid changed from 6 to 5; Score Board confirmed completion | Ownership checks on every basket request |
+| Later Member 1 findings | Bender password change, erased-account login, Gmail login, password resets, 2FA, Easter Egg, Forged Feedback, and Forged Review were documented with supplied evidence | Verify password recovery, MFA, ownership, review authorship, and file-path controls server-side |
 
 No formal CVSS scores are assigned: the session did not gather the evidence needed for a complete scoring assessment.
 
@@ -72,7 +73,7 @@ No formal CVSS scores are assigned: the session did not gather the evidence need
 
 | Member | Sections | Current evidence |
 |---|---|---|
-| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | Four challenges solved across three sections; three sections have no recorded tests. |
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | 18 objectives confirmed; 28 of 46 listed objectives remain unconfirmed. |
 | Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
 | Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
 
@@ -94,7 +95,7 @@ The [threat-model review](../assets/Threat-Model/README.md) relates observed fin
 4. Add controls for the other vulnerability classes after teammates document their results.
 
 ## Limitations
-- All eight Member 1 evidence screenshots are saved. Basket API request/response evidence was not captured.
+- Member 1 evidence currently includes the saved screenshots listed in the evidence register. Basket API request/response evidence was not captured.
 - Exact application commit, some software versions, and HTTP request/response captures were not recorded.
 - The proposed normal failed-login baseline was not evidenced.
 - Administrator page access was tested while authenticated as admin.
@@ -103,7 +104,7 @@ The [threat-model review](../assets/Threat-Model/README.md) relates observed fin
 - Teammate findings remain pending.
 
 ## Conclusion
-Member 1's original four-challenge allocation is complete; the expanded six-section allocation remains in progress. The findings illustrate why parameterized queries, strong authentication, and server-side authorization are necessary. The group submission remains incomplete until the agreed challenge scope across the 16 sections is tested, documented, and reviewed.
+Member 1 has confirmed 18 objectives and documented 16 findings. The remaining 28 listed objectives are unconfirmed, including the unresolved CSRF and chatbot coupon objectives and all currently untested Cryptographic Issues, Insecure Deserialization, and Security through Obscurity objectives. The group submission remains incomplete until the agreed scope is tested, documented, and peer-reviewed.
 
 ## Supporting material
 [Evidence register](../evidence/README.md) · [Contributions](contributions.md) · [References](../references.md)

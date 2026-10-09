@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#1a1d27"/>
+      <stop offset="1" stop-color="#090b12"/>
+    </linearGradient>
+    <linearGradient id="topbar" x1="0" x2="1">
+      <stop offset="0" stop-color="#7b8ca1"/>
+      <stop offset="1" stop-color="#5c6777"/>
+    </linearGradient>
+    <linearGradient id="nav" x1="0" x2="1">
+      <stop offset="0" stop-color="#5a6e7c"/>
+      <stop offset="1" stop-color="#455766"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop offset="0" stop-color="#3a9b59"/>
+      <stop offset="1" stop-color="#2d7f4a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <rect x="0" y="0" width="1280" height="30" fill="url(#topbar)"/>
+  <rect x="0" y="30" width="1280" height="54" fill="url(#nav)"/>
+
+  <rect x="0" y="84" width="1280" height="636" fill="#1d2128"/>
+
+  <rect x="90" y="120" width="1100" height="52" rx="6" fill="url(#green)"/>
+  <text x="140" y="153" fill="#ffffff" font-size="25" font-family="Arial, sans-serif">You successfully solved a challenge: Reset Bender's Password (Reset Bender's password via the Forgot Password mechanism with the original answer to his security question.)</text>
+  <rect x="1050" y="132" width="118" height="28" rx="4" fill="rgba(255,255,255,0.12)" stroke="#d7e8df"/>
+  <text x="1085" y="152" fill="#ffffff" font-size="12" font-family="Arial, sans-serif" text-anchor="middle">x</text>
+
+  <rect x="315" y="210" width="650" height="420" rx="10" fill="#363d46" opacity="0.95"/>
+  <text x="640" y="260" fill="#f2f2f2" font-size="36" font-weight="700" text-anchor="middle" font-family="Arial, sans-serif">Forgot Password</text>
+
+  <rect x="370" y="300" width="540" height="44" rx="4" fill="#2f343c" stroke="#5d676f"/>
+  <text x="390" y="329" fill="#c5ced9" font-size="18" font-family="Arial, sans-serif">Email*</text>
+
+  <rect x="370" y="360" width="540" height="44" rx="4" fill="#2f343c" stroke="#5d676f"/>
+  <text x="390" y="389" fill="#c5ced9" font-size="18" font-family="Arial, sans-serif">Security Question*</text>
+
+  <rect x="370" y="430" width="540" height="44" rx="4" fill="#2f343c" stroke="#5d676f"/>
+  <text x="390" y="459" fill="#c5ced9" font-size="18" font-family="Arial, sans-serif">New Password*</text>
+
+  <rect x="370" y="490" width="540" height="44" rx="4" fill="#2f343c" stroke="#5d676f"/>
+  <text x="390" y="519" fill="#c5ced9" font-size="18" font-family="Arial, sans-serif">Repeat New Password*</text>
+
+  <text x="660" y="585" fill="#d9f5df" font-size="18" text-anchor="middle" font-family="Arial, sans-serif">Your password was successfully changed.</text>
+
+  <rect x="370" y="600" width="540" height="12" fill="#db4b4b" opacity="0.8"/>
+
+  <circle cx="1022" cy="322" r="10" fill="#6b7a88"/>
+  <circle cx="1022" cy="382" r="10" fill="#6b7a88"/>
+  <circle cx="1022" cy="452" r="10" fill="#6b7a88"/>
+  <circle cx="1022" cy="512" r="10" fill="#6b7a88"/>
+
+  <text x="640" y="190" fill="#ffffff" font-size="16" font-family="Arial, sans-serif" text-anchor="middle">OWASP Juice Shop</text>
+</svg>

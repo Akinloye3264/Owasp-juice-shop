@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0f1a26"/>
+      <stop offset="100%" stop-color="#0b1320"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop offset="0%" stop-color="#1d9b60"/>
+      <stop offset="100%" stop-color="#16704a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="96" y="88" width="1088" height="520" rx="18" fill="#1b2430" stroke="#2d3d52"/>
+  <rect x="120" y="120" width="1040" height="40" rx="8" fill="#2b3a47"/>
+  <text x="640" y="148" text-anchor="middle" fill="#edf4ff" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">OWASP Juice Shop</text>
+  <rect x="120" y="190" width="1040" height="82" rx="10" fill="url(#green)"/>
+  <text x="640" y="242" text-anchor="middle" fill="#ebfff3" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Logged in successfully as bjoern.kimminich@gmail.com</text>
+  <rect x="280" y="310" width="720" height="200" rx="12" fill="#243441" stroke="#3b5069"/>
+  <text x="640" y="360" text-anchor="middle" fill="#dfeef9" font-size="24" font-family="Segoe UI, Arial, sans-serif">Email entered</text>
+  <text x="640" y="400" text-anchor="middle" fill="#b7d2ec" font-size="28" font-family="Segoe UI, Arial, sans-serif">bjoern.kimminich@gmail.com</text>
+  <text x="640" y="455" text-anchor="middle" fill="#dfeef9" font-size="24" font-family="Segoe UI, Arial, sans-serif">Password derived from reversed Gmail address + Base64</text>
+  <text x="640" y="495" text-anchor="middle" fill="#b7d2ec" font-size="22" font-family="Segoe UI, Arial, sans-serif">bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=</text>
+</svg>

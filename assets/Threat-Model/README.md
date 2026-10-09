@@ -9,7 +9,7 @@ This file is the group's review and mapping, not a copy of that report and not a
 
 | Member | Sections | Current evidence |
 |---|---|---|
-| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | Four challenges solved across three sections; three sections have no recorded tests. |
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | 18 objectives confirmed; 16 findings documented; 28 of 46 listed objectives remain unconfirmed. |
 | Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
 | Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
 
@@ -24,6 +24,12 @@ These are the group's analytical mappings, not quotations or exact copies of sou
 | Admin Section | Authenticated user to privileged administration interface | Consequence of administrator compromise | Page reached as admin; no separate role-check bypass established | Server-side role checks; fix authentication weakness |
 | Password Strength | Credentials to authentication process | Spoofing using predictable administrator credentials | Existing supplied password accepted; no brute-force test performed | Unique strong credentials, MFA, common-password blocking |
 | View Basket | Browser-selected basket ID to server-side basket data | Information disclosure through missing object ownership enforcement | bid 6 changed to 5 and challenge solved; returned data not captured | Ownership check on every basket request |
+| Bender Password Change | Authenticated browser request to password-change endpoint | Account takeover through missing current-password validation | Success screenshot shows the target request and challenge completion | Verify current password server-side; protect password changes; invalidate sessions |
+| Chris Erased Account | Login input to user lookup and authentication process | Spoofing and access to a soft-deleted account | Success notification confirms the erased-account challenge | Parameterized queries and independent deleted-account enforcement |
+| Forged Feedback | Feedback form user identifier to feedback store | Spoofing through client-controlled ownership data | Success screenshot confirms feedback under another user's identity | Derive ownership from the authenticated session |
+| Forged Review | Review author field to review store | Spoofing or unauthorized modification of review ownership | Baseline and modified request screenshots plus success evidence | Derive authorship server-side and enforce review authorization |
+| Bjoern/Jim Resets and Wurstbrot 2FA | Recovery and MFA flows to account authentication | Account takeover through discoverable recovery data or exposed MFA secret | Success screenshots confirm training-instance challenge completion | Random recovery tokens, rate limiting, protected MFA enrollment secrets |
+| Hidden Easter Egg | Public file endpoint to hidden resource | Information disclosure through unsafe path/extension handling | Green Score Board evidence confirms the challenge | Canonicalize paths and validate the final resolved resource |
 | Member 2 findings | To be documented after testing | XSS/validation mappings pending | Not yet tested by group | To be supported by results |
 | Member 3 findings | To be documented after testing | Exposure/configuration mappings pending | Not yet tested by group | To be supported by results |
 

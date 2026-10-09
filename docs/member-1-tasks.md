@@ -21,11 +21,13 @@ The allocation covers all 16 topic sections, with Score Board as shared preparat
 
 ## Existing completed work
 
-- Injection: Login Admin (F01).
-- Broken Access Control: Admin Section (F02), View Basket (F04); Web3 Sandbox and five-star feedback have screenshots only.
-- Broken Authentication: Password Strength (F03); Bjoern's Favorite Pet (F05).
+- Injection: Login Admin and Login Bender.
+- Broken Access Control: Admin Section, View Basket, Web3 Sandbox, Five-Star Feedback, Hidden Easter Egg, Forged Feedback, and Forged Review.
+- Broken Authentication: Password Strength, Bjoern's Favorite Pet, Bender reset, Bender password change, Chris erased account, Bjoern Gmail, Bjoern internal reset, Jim reset, and Wurstbrot 2FA.
 
-These four findings and their eight screenshots are preserved. Other challenges within these sections remain unrecorded. Cryptographic Issues, Insecure Deserialization, and Security through Obscurity have no recorded tests yet.
+Seventeen objectives are confirmed from the checklist and supplied screenshots. The chatbot system-prompt response, chatbot prompt-injection attempt, 50-percent coupon attempt, and CSRF request remain unconfirmed because their Score Board cards were gray. Cryptographic Issues, Insecure Deserialization, and Security through Obscurity have no confirmed tests yet.
+
+To complete every listed objective in this document, 28 of 46 objectives remain unconfirmed. The assignment does not establish that all 46 are required.
 
 ## Source objectives to inventory
 
@@ -34,29 +36,29 @@ These are objective headings read from the supplied section files, not a claim t
 ### Broken Authentication
 
 - [x] Reset the password of Bjoern's OWASP account via the Forgot Password mechanism
-- [ ] Change Bender's password into slurmCl4ssic without using SQL Injection or Forgot Password
-- [ ] Log in with Chris' erased user account
-- [ ] Log in with Bjoern's Gmail account
+- [x] Change Bender's password into slurmCl4ssic without using SQL Injection or Forgot Password
+- [x] Log in with Chris' erased user account
+- [x] Log in with Bjoern's Gmail account
 - [x] Log in with the administrator's user credentials without previously changing them or applying SQL Injection
-- [ ] Reset Bender's password via the Forgot Password mechanism
-- [ ] Reset the password of Bjoern's internal account via the Forgot Password mechanism
-- [ ] Reset Jim's password via the Forgot Password mechanism
-- [ ] Solve the 2FA challenge for user "wurstbrot"
+- [x] Reset Bender's password via the Forgot Password mechanism
+- [x] Reset the password of Bjoern's internal account via the Forgot Password mechanism
+- [x] Reset Jim's password via the Forgot Password mechanism
+- [x] Solve the 2FA challenge for user "wurstbrot"
 
 ### Broken Access Control
 
 - [ ] Reveal some behind-the-scenes information on the chatbot as a non-admin user
-- [ ] Access the administration section of the store
+- [x] Access the administration section of the store
 - [ ] Change the name of a user by performing Cross-Site Request Forgery from another origin
-- [ ] Find the hidden easter egg
-- [ ] Get rid of all 5-star customer feedback
-- [ ] Post some feedback in another user's name
-- [ ] Post a product review as another user or edit any user's existing review
+- [x] Find the hidden easter egg
+- [x] Get rid of all 5-star customer feedback
+- [x] Post some feedback in another user's name
+- [x] Post a product review as another user or edit any user's existing review
 - [ ] Put an additional product into another user's shopping basket
 - [ ] Change the href of the link within the O-Saft product description
 - [ ] Request a hidden resource on server through server
-- [ ] View another user's shopping basket
-- [ ] Find an accidentally deployed code sandbox
+- [x] View another user's shopping basket
+- [x] Find an accidentally deployed code sandbox
 
 ### Injection
 
@@ -66,7 +68,7 @@ These are objective headings read from the supplied section files, not a claim t
 - [ ] Order the Christmas special offer of 2014
 - [ ] Exfiltrate the entire DB schema definition via SQL Injection
 - [ ] Log in with the (non-existing) accountant without ever registering that user
-- [ ] Log in with the administrator's user account
+- [x] Log in with the administrator's user account
 - [x] Log in with Bender's user account — success banner observed in supplied chat screenshot; image file and reproduction steps pending.
 - [ ] Log in with Jim's user account
 - [ ] Let the server sleep for some time

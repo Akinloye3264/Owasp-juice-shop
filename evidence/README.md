@@ -1,7 +1,7 @@
 # Evidence register
 
 ## Availability
-All eight Member 1 screenshots are saved in `evidence/member-1/`. They were extracted unchanged from the embedded PNG images in the supplied conversation notes, visually inspected, and linked in the [assessment report](../docs/final-report.md) and corresponding findings.
+Member 1 evidence is saved in `evidence/member-1/`. The files below are the screenshots currently present in the repository and are linked to the corresponding findings where available.
 
 | ID | Required filename | Caption and what it establishes |
 |---|---|---|
@@ -14,6 +14,24 @@ All eight Member 1 screenshots are saved in `evidence/member-1/`. They were extr
 | E06 (saved) | [06-view-basket-bid-5.png](member-1/06-view-basket-bid-5.png) | Firefox Storage panel displaying edited bid value 5. This image alone does not prove cross-user access. |
 | E07 (saved) | [07-member-1-all-four-solved.png](member-1/07-member-1-all-four-solved.png) | Final Score Board showing Login Admin, Admin Section, Password Strength, and View Basket all green. Primary completion summary. |
 | E12 (saved) | [12-bjoerns-favorite-pet-success.png](member-1/12-bjoerns-favorite-pet-success.png) | Forgot Password page with Bjoern's Favorite Pet success banner and “Your password was successfully changed.” Score Board card not in this shot. |
+| E13 (saved) | [14-bender-reset-success.svg](member-1/14-bender-reset-success.svg) | Forgot Password page showing the successful Bender password-reset challenge banner and completion confirmation. |
+| E14 (saved) | [15-bender-password-change-success.png](member-1/15-bender-password-change-success.png) | Direct password-change API request solved the Bender challenge without SQL Injection or Forgot Password. |
+| E15 (saved) | [16-chris-erased-user-success.svg](member-1/16-chris-erased-user-success.svg) | Login succeeded for Chris’ erased account by bypassing the deletedAt check. |
+| E16 (saved) | [17-bjoern-gmail-login-success.svg](member-1/17-bjoern-gmail-login-success.svg) | Bjoern’s Gmail OAuth account was logged into using the reversed-email and Base64-derived password. |
+| E17 (saved) | [18-bjoern-internal-reset-success.png](member-1/18-bjoern-internal-reset-success.png) | Success notification for resetting Bjoern’s internal account through Forgot Password. |
+| E18 (saved) | [19-jim-password-reset-success.png](member-1/19-jim-password-reset-success.png) | Success notification for resetting Jim’s password through Forgot Password. |
+| E19 (saved) | [20-wurstbrot-2fa-success.png](member-1/20-wurstbrot-2fa-success.png) | Success notification for completing Wurstbrot’s 2FA challenge. |
+| E20 (saved) | [21-chatbot-endpoint-unavailable.png](member-1/21-chatbot-endpoint-unavailable.png) | AI chatbot endpoint unavailable message; records an unavailable objective, not a solved challenge. |
+| E21 (saved) | [23-csrf-success.png](member-1/23-csrf-success.png) | Profile showing the username changed to CSRF; the Score Board card remained gray, so completion is not established. |
+| E22 (saved) | [24-csrf-network.png](member-1/24-csrf-network.png) | Cross-origin POST request payload containing `username=CSRF`. |
+| E23 (saved) | [25-csrf-response.png](member-1/25-csrf-response.png) | Cross-origin profile request response showing the redirect and successful profile retrieval. |
+| E24 (saved) | [28-hidden-easter-egg-success.png](member-1/28-hidden-easter-egg-success.png) | Score Board showing the Hidden Easter Egg challenge in green. |
+| E25 (saved) | [31-forged-feedback-success.png](member-1/31-forged-feedback-success.png) | Success notification for posting feedback in another user’s name. |
+| E26 (saved) | [32-review-normal-request.png](member-1/32-review-normal-request.png) | Baseline product-review request before changing the author value. |
+| E27 (saved) | [33-review-forged-success.png](member-1/33-review-forged-success.png) | Success evidence for the forged product-review challenge. |
+| E28 (saved) | [34-ai-debugging-success.png](member-1/34-ai-debugging-success.png) | Chatbot exposed its system prompt, but the AI Debugging Score Board card was not confirmed green. |
+| E29 (saved) | [35-chatbot-prompt-injection-attempt.png](member-1/35-chatbot-prompt-injection-attempt.png) | Chatbot generated a 15-percent coupon attempt; the Prompt Injection card remained gray. |
+| E30 (saved) | [36-chatbot-50-percent-coupon.png](member-1/36-chatbot-50-percent-coupon.png) | Chatbot generated a 50-percent-or-more coupon attempt; completion was not confirmed on the Score Board. |
 
 ## Screenshot gallery
 
@@ -52,6 +70,78 @@ All eight Member 1 screenshots are saved in `evidence/member-1/`. They were extr
 ![Bjoern's Favorite Pet success](member-1/12-bjoerns-favorite-pet-success.png)
 
 **E12:** Forgot Password page confirms Bjoern's Favorite Pet solved. Score Board confirmation for this card is still needed.
+
+![Bender reset success](member-1/14-bender-reset-success.svg)
+
+**E13:** Forgot Password page confirms the Bender password reset challenge solved. The success banner and form state show the challenge result.
+
+![Bender password change success](member-1/15-bender-password-change-success.png)
+
+**E14:** The password-change API request succeeded with Bender’s session token and set the password to slurmCl4ssic without using SQL Injection or Forgot Password.
+
+![Chris erased user success](member-1/16-chris-erased-user-success.svg)
+
+**E15:** Login succeeded for Chris’ erased user account by bypassing the deletedAt guard in the SQL login condition.
+
+![Bjoern Gmail login success](member-1/17-bjoern-gmail-login-success.svg)
+
+**E16:** Success banner confirms the Gmail/OAuth-derived login for Bjoern using the reversed-email Base64 password.
+
+![Bjoern internal reset success](member-1/18-bjoern-internal-reset-success.png)
+
+**E17:** Success banner confirms Bjoern’s internal-account password reset.
+
+![Jim password reset success](member-1/19-jim-password-reset-success.png)
+
+**E18:** Success banner confirms Jim’s password reset.
+
+![Wurstbrot 2FA success](member-1/20-wurstbrot-2fa-success.png)
+
+**E19:** Success banner confirms completion of the Wurstbrot 2FA challenge.
+
+![Chatbot endpoint unavailable](member-1/21-chatbot-endpoint-unavailable.png)
+
+**E20:** The AI endpoint was unavailable. This is a limitation record, not proof of challenge completion.
+
+![CSRF profile result](member-1/23-csrf-success.png)
+
+**E21:** The profile username changed to CSRF, but the Score Board remained gray.
+
+![CSRF network request](member-1/24-csrf-network.png)
+
+**E22:** Network evidence shows the cross-origin profile POST payload.
+
+![CSRF response](member-1/25-csrf-response.png)
+
+**E23:** Network response evidence shows the profile request redirect and follow-up response.
+
+![Hidden Easter Egg success](member-1/28-hidden-easter-egg-success.png)
+
+**E24:** Score Board confirms the Hidden Easter Egg challenge.
+
+![Forged feedback success](member-1/31-forged-feedback-success.png)
+
+**E25:** Success banner confirms feedback was posted in another user’s name.
+
+![Normal review request](member-1/32-review-normal-request.png)
+
+**E26:** Baseline request captured before modifying the review author.
+
+![Forged review success](member-1/33-review-forged-success.png)
+
+**E27:** Success evidence confirms the forged product-review challenge.
+
+![AI debugging attempt](member-1/34-ai-debugging-success.png)
+
+**E28:** The chatbot disclosed its system prompt, but the challenge card was not confirmed green.
+
+![Chatbot prompt injection attempt](member-1/35-chatbot-prompt-injection-attempt.png)
+
+**E29:** The chatbot generated a 15-percent coupon attempt; this is not confirmed challenge completion.
+
+![Chatbot 50 percent coupon attempt](member-1/36-chatbot-50-percent-coupon.png)
+
+**E30:** The chatbot generated a coupon stated to be worth at least 50 percent; the Score Board result remains unconfirmed.
 
 ## Capture and publication checklist
 - Preserve readable URLs, challenge names, and success indicators.

@@ -7,11 +7,11 @@ The group allocation covers 16 vulnerability topic sections, divided 6/5/5. Scor
 
 | Member | Sections | Current evidence |
 |---|---|---|
-| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | Four challenges solved across three sections; three sections have no recorded tests. |
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | 18 objectives confirmed; 28 of 46 listed objectives remain unconfirmed. Three sections have no confirmed tests. |
 | Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
 | Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
 
-Member 1 has four completed findings across three sections. All eight evidence images are saved and embedded; the expanded section allocation remains in progress.
+Member 1 has 16 documented findings and 18 confirmed objectives across Broken Authentication, Broken Access Control, and Injection. Some later screenshots are evidence of attempts or unavailable behavior rather than confirmed challenge completion. The expanded six-section allocation remains in progress.
 
 ## Sections and challenges
 A section is a vulnerability topic containing several individual hacking challenges. A challenge is one Score Board objective; it does not universally have sub-challenges. Some challenges have an associated coding exercise with two phases, **Find It** and **Fix It**. Hints, tutorials, and star ratings are guidance and difficulty indicators, not extra hacking challenges. Bonus objectives can appear as separate Score Board challenges.
@@ -31,10 +31,7 @@ The allocation covers all 16 topic sections, with Score Board as shared preparat
 - [Threat-model review and mapping](assets/Threat-Model/README.md)
 
 ## Completed findings
-1. [Login Admin](findings/member-1/01-login-admin.md)
-2. [Admin Section](findings/member-1/02-admin-section.md)
-3. [Password Strength](findings/member-1/03-password-strength.md)
-4. [View Basket](findings/member-1/04-view-basket.md)
+See the complete [Member 1 findings directory](findings/member-1/). It includes the original four findings plus the later authentication, access-control, and review findings.
 
 ## Method and attribution
 Testing took place against Juice Shop at `http://localhost:3000` inside a Kali Linux VirtualBox VM. The supplied walkthrough and AI-assisted guidance supported the tests and documentation. These are guided exercises, not claims of independent vulnerability discovery. Recommendations are proposed fixes, not implemented or verified fixes.
