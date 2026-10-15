@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0f1a26"/>
+      <stop offset="100%" stop-color="#0c1220"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop offset="0%" stop-color="#1c8c4c"/>
+      <stop offset="100%" stop-color="#12663a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="80" y="90" width="1120" height="510" rx="18" fill="#182536" stroke="#2d3d52"/>
+  <rect x="110" y="120" width="1060" height="72" rx="10" fill="url(#green)"/>
+  <text x="640" y="168" text-anchor="middle" fill="#effdf5" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700">You successfully solved a challenge: GDPR Data Erasure (Log in with Chris' erased user account.)</text>
+  <text x="640" y="270" text-anchor="middle" fill="#e4edf9" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700">OWASP Juice Shop</text>
+  <text x="640" y="320" text-anchor="middle" fill="#d7e5f2" font-size="28" font-family="Segoe UI, Arial, sans-serif">Erased-user login payload used</text>
+  <text x="640" y="365" text-anchor="middle" fill="#b9d1ea" font-size="26" font-family="Segoe UI, Arial, sans-serif">Email: chris.pike@juice-sh.op'--</text>
+  <text x="640" y="408" text-anchor="middle" fill="#b9d1ea" font-size="26" font-family="Segoe UI, Arial, sans-serif">Password: anything</text>
+  <text x="640" y="480" text-anchor="middle" fill="#b9d1ea" font-size="22" font-family="Segoe UI, Arial, sans-serif">This confirms a SQL-injection bypass of the deletedAt IS NULL condition.</text>
+</svg>
