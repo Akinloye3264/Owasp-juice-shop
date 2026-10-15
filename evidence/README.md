@@ -1,7 +1,38 @@
 # Evidence register
 
 ## Availability
-Member 1 evidence is saved in `evidence/member-1/`. The files below are the screenshots currently present in the repository and are linked to the corresponding findings where available.
+Member 1 evidence is saved in `evidence/member-1/`, and Member 3 evidence is saved in `evidence/member-3/`. Files remain attributed to the member directory in which they were captured; cross-references do not transfer ownership.
+
+## Member 3 evidence
+
+| ID | File | What it establishes |
+|---|---|---|
+| M3-E01 | [Access Log](member-3/01-access-log-success.png) | Access Log success notification. |
+| M3-E02 | [Misplaced IaC Files](member-3/02-misplaced-iac-files-success.png) | Publicly reachable infrastructure-file challenge completed. |
+| M3-E03 | [Login Support Team](member-3/03-login-support-team-success.png) | Support-team account accepted the original credentials. |
+| M3-E04 | [Misplaced Signature File](member-3/04-misplaced-signature-file-success.png) | Publicly reachable SIEM signature file and success notification. |
+| M3-E05 | [Leaked Access Logs](member-3/05-leaked-access-logs-success.png) | Login with the account associated with leaked log credentials. |
+| M3-E06 | [Cross-Site Imaging](member-3/06-cross-site-imaging-success.png) | Remote delivery-box imagery accepted and challenge completed. |
+| M3-E07 | [Legacy Typosquatting](member-3/07-legacy-typosquatting-success.png) | Historical typosquatting dependency correctly reported. |
+| M3-E08 | [Frontend Typosquatting](member-3/08-frontend-typosquatting-success.png) | Frontend dependency imposter correctly reported. |
+| M3-E09 | [Exposed Metrics](member-3/09-exposed-metrics-success.png) | Metrics output and challenge-success banner shown together. |
+| M3-E10 | [Vulnerable Infrastructure](member-3/10-vulnerable-infrastructure-success.png) | Known-vulnerable infrastructure component correctly reported. |
+| M3-E11 | [Supply Chain Attack](member-3/11-supply-chain-attack-success.png) | Credential-impacting dependency issue correctly reported. |
+| M3-E12 | [Vulnerable Library](member-3/12-vulnerable-library-success.png) | High-severity direct dependency issue correctly reported. |
+| M3-E13 | [Security Policy](member-3/13-security-policy-success.png) | Supplemental Security Policy challenge completed. |
+| M3-E14 | [Forgotten Developer Backup](member-3/14-forgotten-developer-backup-success.png) | Supplemental backup-file challenge completed. |
+| M3-E15 | [Forgotten Sales Backup](member-3/15-forgotten-sales-backup-success.png) | Supplemental backup-file challenge completed. |
+| M3-E16 | [Upload Type](member-3/16-upload-type-success.png) | Supplemental upload-extension challenge completed. |
+| M3-E17 | [Unsigned JWT](member-3/17-unsigned-jwt-success.png) | Essentially unsigned identity token accepted. |
+| M3-E18 | [Security Advisory](member-3/18-security-advisory-csaf-success.png) | Supplemental current-version advisory challenge completed. |
+| M3-E19 | [Forged Signed JWT](member-3/19-forged-jwt-success.png) | Almost correctly RSA-signed identity token accepted. |
+| M3-E20 | [Arbitrary File Write](member-3/20-arbitrary-file-write-success.png) | Legal Information file overwrite challenge completed. |
+| M3-E21 | [Local File Read](member-3/21-local-file-read-success.png) | Arbitrary local-file read challenge completed. |
+| M3-E22 | [Error Handling](member-3/22-error-handling-success.png) | The verbose Express error response and green Score Board card confirm the inconsistent error-handling challenge. |
+
+Member 3's selected 18-objective scope uses 17 of these screenshots. Deprecated Interface is cross-referenced to Member 1's E52 without relabeling it. Five Member 3 screenshots are supplemental and do not expand the agreed scope.
+
+## Member 1 evidence
 
 | ID | Required filename | Caption and what it establishes |
 |---|---|---|
@@ -271,4 +302,4 @@ Member 1 evidence is saved in `evidence/member-1/`. The files below are the scre
 - If publishing, redact personal email addresses and any real authentication tokens in a clearly identified redacted copy.
 - Keep original screenshots unchanged where appropriate for private assessment.
 - Add captions stating what an image proves and any limits.
-- Each teammate uses their own evidence directory; their evidence is pending.
+- Each teammate keeps captures in their own evidence directory so authorship remains clear.

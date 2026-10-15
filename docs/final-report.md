@@ -2,10 +2,10 @@
 
 **Group:** BoyCode  
 **Assessment date:** 1 October 2026  
-**Status:** All 46 listed Member 1 objectives checked; 28 detailed finding reports currently present; newer completions registered in the evidence set.
+**Status:** Member 1's 46 listed objectives are checked. Member 3's selected three-section scope is complete at 18/18, with section findings and evidence registered.
 
 ## Executive summary
-The group allocated all 16 vulnerability topic sections among three members to study authentication, access control, input validation, cross-site scripting, information exposure, and configuration weaknesses in a deliberately vulnerable local application. Member 1 has checked all 46 listed objectives across the six assigned sections. Twenty-eight detailed finding reports are currently present, while the evidence register records the newer completions.
+The group allocated vulnerability topics among three members to study authentication, access control, input validation, cross-site scripting, information exposure, and configuration weaknesses in a deliberately vulnerable local application. Member 1 checked all 46 listed objectives across six sections. Member 3 completed 18/18 source objectives across Observability Failures, Security Misconfiguration, and Vulnerable Components, with Sensitive Data Exposure and XXE reassigned.
 
 These results demonstrate an administrator login bypass, access to the administrator interface after compromise, authentication with a predictable administrator password, and a basket-identifier manipulation challenge. Admin Section is documented as privileged-interface access, not independent proof of a role-check bypass.
 
@@ -76,7 +76,17 @@ No formal CVSS scores are assigned: the session did not gather the evidence need
 |---|---|---|
 | Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | All 46 listed objectives checked; 28 detailed finding reports currently present. |
 | Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
-| Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
+| Member 3 (selected 3 sections) | Observability Failures; Security Misconfiguration; Vulnerable Components | 18/18 source objectives completed; 22 screenshots saved, including five supplemental results; section findings added. |
+
+## Confirmed Member 3 results
+
+| Finding | Observation | Principal recommendation |
+|---|---|---|
+| [F3-01 Observability Failures](../findings/member-3/01-observability-failures.md) | Public logs, metrics, a SIEM signature, and leaked credentials were demonstrated across four completed challenges | Restrict operational endpoints, remove artifacts from public paths, redact secrets, and rotate exposed credentials |
+| [F3-02 Security Misconfiguration](../findings/member-3/02-security-misconfiguration.md) | Five objectives were completed across cross-origin content, obsolete interfaces, error behavior, deployment files, and support credentials | Reduce deployment surface, standardize errors, restrict origins, remove obsolete routes, and strengthen privileged authentication |
+| [F3-03 Vulnerable Components](../findings/member-3/03-vulnerable-components.md) | Nine objectives demonstrated JWT verification, file-processing, dependency, and supply-chain weaknesses | Enforce token algorithms and claims, isolate file processing, verify dependencies, maintain an SBOM, and patch known vulnerabilities |
+
+Member 3 saved 22 screenshots. Seventeen directly support the selected scope, five are supplemental, and Deprecated Interface remains attributed to Member 1 evidence E52.
 
 ## Sections and challenges
 A section is a vulnerability topic containing several individual hacking challenges. A challenge is one Score Board objective; it does not universally have sub-challenges. Some challenges have an associated coding exercise with two phases, **Find It** and **Fix It**. Hints, tutorials, and star ratings are guidance and difficulty indicators, not extra hacking challenges. Bonus objectives can appear as separate Score Board challenges.
@@ -88,12 +98,14 @@ The allocation covers all 16 topic sections, with Score Board as shared preparat
 See [Member 1](member-1-tasks.md), [Member 2](member-2-tasks.md), and [Member 3](member-3-tasks.md) assignments for source objectives and deliverables.
 
 ## Remediation priorities
-The [threat-model review](../assets/Threat-Model/README.md) relates observed findings to assets, trust boundaries, and threat categories in the supplied model. The source model is background analysis, not experimental evidence. Member 1 mappings are drafted; members 2 and 3 must add theirs after testing. No additional challenges are required solely to cover all source-model threats.
+The [threat-model review](../assets/Threat-Model/README.md) relates observed findings to assets, trust boundaries, and threat categories in the supplied model. The source model is background analysis, not experimental evidence. Member 1 and Member 3 mappings are drafted; Member 2 must add theirs after testing. No additional challenges are required solely to cover all source-model threats.
 
 1. Prevent administrator authentication bypass with parameterized database access and proper credential verification.
 2. Replace predictable privileged credentials and add MFA.
 3. Enforce object ownership for basket access and role checks for administrative operations.
-4. Add controls for the other vulnerability classes after teammates document their results.
+4. Remove operational artifacts and telemetry from public access, redact secrets from logs, and rotate exposed credentials.
+5. Enforce JWT algorithm/key policy and isolate upload processing from the server filesystem.
+6. Maintain an SBOM, verify package provenance, and patch or replace known-vulnerable dependencies.
 
 ## Limitations
 - Member 1 evidence currently includes the saved screenshots listed in the evidence register. Basket API request/response evidence was not captured.
@@ -102,10 +114,11 @@ The [threat-model review](../assets/Threat-Model/README.md) relates observed fin
 - Administrator page access was tested while authenticated as admin.
 - For View Basket, returned basket contents/owner were not captured after the change; challenge completion was captured.
 - No automated scan, production assessment, code audit, or fix verification was conducted.
-- Teammate findings remain pending.
+- Member 2 and the reassigned Sensitive Data Exposure and XXE work remain outside the completed Member 3 scope.
+- Deprecated Interface uses a clearly identified Member 1 cross-reference and is not relabeled as Member 3 evidence.
 
 ## Conclusion
-Member 1 has checked all 46 listed objectives across all six assigned sections. Twenty-eight detailed finding reports are currently present, and screenshots 48–62 document the newer completions. Deprecated Interface was also completed but is supplemental to the 46-item checklist. The group submission still requires teammate work, review, and any detailed write-ups required by the school brief.
+Member 1 has checked all 46 listed objectives across six sections. Member 3 has completed the selected 18-objective scope across three sections and added structured findings, evidence captions, threat mappings, and remediation priorities. Deprecated Interface remains a Member 1 evidence cross-reference rather than being relabeled. The group submission still requires Member 2 and reassigned-section work plus peer review.
 
 ## Supporting material
 [Evidence register](../evidence/README.md) · [Contributions](contributions.md) · [References](../references.md)

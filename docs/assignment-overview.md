@@ -52,13 +52,13 @@ The assignment distributes 16 vulnerability-topic sections among three members. 
 - [Unvalidated Redirects](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/unvalidated-redirects.adoc)
 - [Miscellaneous](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/miscellaneous.adoc)
 
-### Member 3 — five sections
+### Member 3 — selected three-section scope
 
-- [Sensitive Data Exposure](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/sensitive-data-exposure.adoc)
 - [Observability Failures](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/observability-failures.adoc)
 - [Security Misconfiguration](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/security-misconfiguration.adoc)
 - [Vulnerable Components](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/vulnerable-components.adoc)
-- [XML External Entities (XXE)](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/xxe.adoc)
+
+Sensitive Data Exposure and XML External Entities (XXE) were reassigned and are not claimed as Member 3 work.
 
 ## What counts as a task
 
@@ -100,7 +100,7 @@ Member 1 has saved completion evidence across all six assigned sections. The cur
 
 The progress totals in the repository are not fully synchronized. Some summary files state 18 confirmed objectives and 16 documented findings, while the task checklist, finding directory, and newer evidence include additional work. These totals must be reconciled against the saved evidence and Score Board before submission. Unconfirmed attempts must remain distinct from confirmed completions.
 
-Member 2 and Member 3 work is recorded as pending in the combined documentation.
+Member 3's selected scope was revised to Observability Failures, Security Misconfiguration, and Vulnerable Components; all 18 source objectives are recorded complete. Sensitive Data Exposure and XXE were reassigned. Member 2 and the reassigned-section work remain pending in the combined documentation unless separately supplied.
 
 ## Threat-model component
 
@@ -121,7 +121,7 @@ The source threat model describes an Internet-facing system, while this assignme
 - `README.md` — project summary, scope, allocation, and documentation links.
 - `docs/member-1-tasks.md` — Member 1’s six sections and objective checklist.
 - `docs/member-2-tasks.md` — Member 2’s five sections and objective checklist.
-- `docs/member-3-tasks.md` — Member 3’s five sections and objective checklist.
+- `docs/member-3-tasks.md` — Member 3’s selected three sections and 18-objective checklist.
 - `docs/contributions.md` — responsibilities and submission checklist.
 - `docs/final-report.md` — combined assessment report.
 - `docs/assignment-overview.md` — this explanation of the overall assignment.

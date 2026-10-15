@@ -1,15 +1,15 @@
 # Member 3 assignment
 
-**Owner:** Enter your name.
-**Scope:** 5 vulnerability sections; Score Board is shared preparation.
+**Owner:** Member 3
+**Completed scope:** Observability Failures, Security Misconfiguration, and Vulnerable Components (18 source objectives).
+
+Sensitive Data Exposure and XXE were reassigned and are not claimed as Member 3 work in this checklist.
 
 ## Assigned sections
 
-- [Sensitive Data Exposure](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/sensitive-data-exposure.adoc)
 - [Observability Failures](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/observability-failures.adoc)
 - [Security Misconfiguration](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/security-misconfiguration.adoc)
 - [Vulnerable Components](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/vulnerable-components.adoc)
-- [XXE](https://github.com/Los-merengue/Walkthrough/blob/main/owasp-juice-shop/Challenges-Question/xxe.adoc)
 
 ## Sections and challenges
 A section is a vulnerability topic containing several individual hacking challenges. A challenge is one Score Board objective; it does not universally have sub-challenges. Some challenges have an associated coding exercise with two phases, **Find It** and **Fix It**. Hints, tutorials, and star ratings are guidance and difficulty indicators, not extra hacking challenges. Bonus objectives can appear as separate Score Board challenges.
@@ -22,57 +22,43 @@ The allocation covers all 16 topic sections, with Score Board as shared preparat
 
 These are objective headings read from the supplied section files, not a claim that every objective is required or available in this application version. Use the running Score Board for exact names and availability.
 
-### Sensitive Data Exposure
-
-- [ ] Access a confidential document
-- [ ] Perform an unwanted information disclosure by accessing data cross-domain
-- [ ] A developer was careless with hardcoding unused but still valid credentials
-- [ ] Access a developer's forgotten backup file
-- [ ] Access a salesman's forgotten backup file
-- [ ] Steal someone else's personal data without using Injection
-- [ ] Inform the shop about a leaked API key
-- [ ] Identify an unsafe product that was removed from the shop and inform the shop which ingredients are dangerous
-- [ ] Log in with Amy's original user credentials
-- [ ] Log in with the cloud admin's user account
-- [ ] Log in with MC SafeSearch's original user credentials
-- [ ] Determine the answer to John's security question
-- [ ] Take over the wallet containing our official Soul Bound Token
-- [ ] Obtain the password (hash) of the currently logged-in user directly from a REST API endpoint
-- [ ] Reset Uvogin's password via the Forgot Password mechanism
-- [ ] Deprive the shop of earnings by downloading the blueprint for one of its products
-- [ ] Determine the answer to Emma's security question
-
 ### Observability Failures
 
-- [ ] Gain access to any access log file of the server
-- [ ] Find the endpoint that serves usage data to be scraped by a popular monitoring system
-- [ ] Dumpster dive the Internet for a leaked password and log in to the original user account it belongs to
-- [ ] Access a misplaced SIEM signature file.
+- [x] Gain access to any access log file of the server
+- [x] Find the endpoint that serves usage data to be scraped by a popular monitoring system
+- [x] Dumpster dive the Internet for a leaked password and log in to the original user account it belongs to
+- [x] Access a misplaced SIEM signature file.
 
 ### Security Misconfiguration
 
-- [ ] Stick cute cross-domain kittens all over our delivery boxes
-- [ ] Use a deprecated B2B interface that was not properly shut down
-- [ ] Provoke an error that is neither very gracefully nor consistently handled
-- [ ] Access the misplaced Infrastructure as Code files
-- [ ] Log in with the support team's original user credentials
+- [x] Stick cute cross-domain kittens all over our delivery boxes
+- [x] Use a deprecated B2B interface that was not properly shut down — completion is cross-referenced to Member 1 evidence E52; it is not relabeled as Member 3 evidence
+- [x] Provoke an error that is neither very gracefully nor consistently handled
+- [x] Access the misplaced Infrastructure as Code files
+- [x] Log in with the support team's original user credentials
 
 ### Vulnerable Components
 
-- [ ] Overwrite the Legal Information file
-- [ ] Forge an almost properly RSA-signed JWT token
-- [ ] Inform the shop about a typosquatting imposter that dug itself deep into the frontend
-- [ ] Inform the shop about a typosquatting trick it has been a victim of
-- [ ] Gain read access to an arbitrary local file on the web server
-- [ ] Inform the development team about a danger to some of their credentials
-- [ ] Forge an essentially unsigned JWT token
-- [ ] Inform the shop about the use of a known vulnerable infrastructure component
-- [ ] Inform the shop about a high-severity vulnerability
+- [x] Overwrite the Legal Information file
+- [x] Forge an almost properly RSA-signed JWT token
+- [x] Inform the shop about a typosquatting imposter that dug itself deep into the frontend
+- [x] Inform the shop about a typosquatting trick it has been a victim of
+- [x] Gain read access to an arbitrary local file on the web server
+- [x] Inform the development team about a danger to some of their credentials
+- [x] Forge an essentially unsigned JWT token
+- [x] Inform the shop about the use of a known vulnerable infrastructure component
+- [x] Inform the shop about a high-severity vulnerability
 
-### XXE
+## Completion summary
 
-- [ ] Retrieve the content of C:\Windows\system.ini or /etc/passwd from the server
-- [ ] Give the server something to chew on for quite a while
+| Section | Completed | Evidence note |
+|---|---:|---|
+| Observability Failures | 4/4 | Four Member 3 success screenshots |
+| Security Misconfiguration | 5/5 | Four Member 3 success screenshots and one Member 1 cross-reference |
+| Vulnerable Components | 9/9 | Nine Member 3 success screenshots |
+| **Total** | **18/18** | **Member 3's selected three-section scope is complete** |
+
+Five additional Member 3 screenshots record supplemental challenges outside this 18-objective scope: Security Policy, Security Advisory, Forgotten Developer Backup, Forgotten Sales Backup, and Upload Type. The Member 3 evidence directory now contains 22 screenshots in total.
 
 ## Evidence and deliverables
 1. Record the instance version and the selected challenge scope for every assigned section.
@@ -85,4 +71,4 @@ These are objective headings read from the supplied section files, not a claim t
 
 Use descriptive filenames such as `challenge-name.md`, `challenge-name-action.png`, and `challenge-name-success.png`. Coding exercise completion must be recorded separately from hacking challenge completion.
 
-Member 3 also compiles remediation priorities from all verified group findings.
+Member 3 also compiles remediation priorities from all verified group findings. See the [Member 3 findings index](../findings/member-3/README.md).
