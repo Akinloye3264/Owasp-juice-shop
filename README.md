@@ -7,11 +7,11 @@ The group allocation covers 16 vulnerability topic sections, divided 6/5/5. Scor
 
 | Member | Sections | Current evidence |
 |---|---|---|
-| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | 18 objectives confirmed; 28 of 46 listed objectives remain unconfirmed. Three sections have no confirmed tests. |
+| Member 1 (6 sections) | Broken Authentication; Broken Access Control; Injection; Cryptographic Issues; Insecure Deserialization; Security through Obscurity | All 46 listed objectives checked; 28 detailed finding reports currently present. |
 | Member 2 (5 sections) | XSS; Improper Input Validation; Broken Anti-Automation; Unvalidated Redirects; Miscellaneous | Pending testing and evidence. |
 | Member 3 (5 sections) | Sensitive Data Exposure; Observability Failures; Security Misconfiguration; Vulnerable Components; XXE | Pending testing and evidence. |
 
-Member 1 has 16 documented findings and 18 confirmed objectives across Broken Authentication, Broken Access Control, and Injection. Some later screenshots are evidence of attempts or unavailable behavior rather than confirmed challenge completion. The expanded six-section allocation remains in progress.
+Member 1 has completed all 46 listed objectives across the six assigned sections. Twenty-eight detailed finding reports are currently present, and the evidence register records the newer completions. The separate Deprecated Interface result is supplemental because it is not one of the 46 listed objectives.
 
 ## Sections and challenges
 A section is a vulnerability topic containing several individual hacking challenges. A challenge is one Score Board objective; it does not universally have sub-challenges. Some challenges have an associated coding exercise with two phases, **Find It** and **Fix It**. Hints, tutorials, and star ratings are guidance and difficulty indicators, not extra hacking challenges. Bonus objectives can appear as separate Score Board challenges.
