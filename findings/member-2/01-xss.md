@@ -1,29 +1,29 @@
-Cross-Site Scripting (XSS) Testing
+**Cross-Site Scripting (XSS) Testing**
 
-Vulnerability
+**Vulnerability**
 Cross-Site Scripting (XSS)
 
-Application
+**Application**
 OWASP Juice Shop
 
-Objective
+**Objective**
 To test whether user-controlled input in the OWASP Juice Shop search functionality is properly sanitized before being rendered by the application.
 
-Test Procedure
+**Test Procedure**
 The application's search feature was tested using the following XSS payload:
 
 ```html
 <iframe src="javascript:alert(`xss`)">
 ```
 
-Steps Performed
+**Steps Performed**
 1. Opened the OWASP Juice Shop application in the browser.
 2. Navigated to the search functionality.
 3. Entered the XSS payload into the search field.
 4. Submitted the search request.
 5. Observed the application's response.
 
-Result
+**Result**
 The test was successful.
 
 The application processed the supplied payload and executed the embedded JavaScript code in the browser. An alert displaying:
@@ -56,10 +56,10 @@ Depending on the affected functionality and application configuration, this coul
  Access sensitive information available to client-side scripts.
  Conduct phishing attacks within a trusted application interface.
 
-Root Cause
+**Root Cause**
 The vulnerability occurs because user-supplied input is rendered without sufficient sanitization, validation, or output encoding.
 
-Recommended Mitigation
+**Recommended Mitigation**
 The application should:
 
 - Apply appropriate output encoding before displaying user-controlled input.
