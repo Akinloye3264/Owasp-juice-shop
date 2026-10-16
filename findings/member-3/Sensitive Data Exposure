@@ -1,0 +1,36 @@
+# Sensitive Data Exposure
+
+**Status:** [Completed]  
+**Environment:** OWASP Juice Shop, `localhost:3000`, [insert application version and operating system].
+
+## Results
+
+| Test | Observed result | Evidence status |
+|---|---|---|
+| Public Directory Access | [`/ftp/` displayed a directory listing without authentication.] | [ .] |
+| Confidential Document | [`/ftp/acquisitions.md` returned the confidential business document.] | [ .] |
+| Unauthenticated Access | [The document remained accessible in a fresh private browser session without login.] | [ .] |
+| HTTP Response Verification | [The response status and the document appeared in the response body when authentication headers were absent.] | [ .] |
+| Challenge Completion | [The Confidential Document challenge was marked as solved on the Score Board.] | [ .] |
+
+## Security significance
+
+These results demonstrate that confidential business information was accessible without authentication or authorization. Directory listing makes sensitive files easier to discover, while unrestricted direct access allows anyone who knows the document URL to retrieve its contents.
+
+The primary security failure is insufficient protection of the document. Hiding the directory listing would reduce visibility but would not prevent access through a known URL. In a production environment, similar exposure could disclose internal plans, commercial agreements, or other sensitive records.
+
+## Recommendations
+
+- Store confidential documents outside publicly served directories and provide access through controlled application endpoints.
+- Enforce server-side authentication and document-specific authorization on every protected file request.
+- Disable unnecessary directory listing and verify that direct file URLs remain protected.
+- Exclude internal documents, backups, configuration files, and logs from publicly accessible deployment assets.
+- Monitor sensitive file requests and investigate unusual download activity without recording confidential content or credentials in logs.
+- Retest using unauthenticated users, authenticated users without permission, and authorized users to verify that access restrictions work correctly.
+
+## Limitations
+
+This assessment covers the confidential document endpoint and its related directory within the local Juice Shop laboratory. It does not establish exposure of other files, account compromise, or server compromise. Actual results and screenshots must be added before confirming the finding. No production configuration review or remediation retest is documented.
+
+  
+https://help.owasp-juice.shop/part2/sensitive-data-exposure.html
