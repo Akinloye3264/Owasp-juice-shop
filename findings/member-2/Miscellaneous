@@ -1,0 +1,19 @@
+Miscellaneous Security Testing
+Application: OWASP Juice Shop
+Challenge: Privacy Policy
+Aim
+To examine the application's privacy policy and confirm access to its published data-handling information.
+Objective
+To locate and read the privacy policy, completing the associated OWASP Juice Shop challenge.
+Steps Taken
+1. Opened OWASP Juice Shop in the browser.
+2. Logged in using the test account.
+3. Opened the user menu.
+4. Navigated to the Privacy Policy page.
+5. Reviewed the displayed information concerning the collection, use and protection of personal data.
+6. Checked whether Juice Shop registered completion of the Privacy Policy challenge.
+4. Problems Encountered
+
+Test Result
+The expected outcome is successful access to the Privacy Policy page, followed by the application's Privacy Policy challenge completion notification. Conclusion
+The objective is achieved when the privacy policy is accessed and the challenge is recorded as completed. This exercise demonstrates security awareness and policy discovery rather than exploitation of a vulnerability.
