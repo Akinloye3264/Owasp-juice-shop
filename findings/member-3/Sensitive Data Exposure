@@ -30,7 +30,4 @@ The primary security failure is insufficient protection of the document. Hiding 
 
 ## Limitations
 
-This assessment covers the confidential document endpoint and its related directory within the local Juice Shop laboratory. It does not establish exposure of other files, account compromise, or server compromise. Actual results and screenshots must be added before confirming the finding. No production configuration review or remediation retest is documented.
-
-  
-https://help.owasp-juice.shop/part2/sensitive-data-exposure.html
+This assessment covers the confidential document endpoint and its related directory within the local Juice Shop laboratory. It does not establish exposure of other files, account compromise, or server compromise.
