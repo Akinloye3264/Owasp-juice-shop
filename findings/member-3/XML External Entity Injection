@@ -1,0 +1,35 @@
+# XML External Entity Injection
+
+**Status:** [Insert completion status]  
+**Environment:** OWASP Juice Shop, `localhost:3000`, [insert application version, operating system, and deployment method].
+
+## Results
+
+| Test | Observed result | Evidence status |
+|---|---|---|
+| XML Input Processing | [The application accepted and processed XML input.] | [ .] |
+| External Entity Handling | [The XML parser rejected  the supplied external entity.] | [.] |
+| XXE Data Access | [The response disclosed content from the selected laboratory file.] | [.] |
+| Challenge Completion | [The XXE Data Access challenge was marked as unavailable.] | [.] |
+
+## Security significance
+
+The test confirms XXE injection. The weakness occurs when an application processes untrusted XML while allowing the parser to resolve external entities.
+
+Successful exploitation can expose files readable by the application process. Depending on parser capabilities and network permissions, XXE may also enable server-side requests to internal or external services. These additional impacts should only be reported as demonstrated findings when separately tested.
+
+
+## Recommendations
+
+- Disable Document Type Definitions and external entity resolution in the XML parser.
+- Disable external DTD loading, external schema retrieval, and XInclude processing where supported and unnecessary.
+- Use a maintained XML parser with explicitly configured security settings.
+- Validate XML against a trusted local schema when appropriate. Schema validation must supplement secure parser settings.
+- Run the application with minimal filesystem permissions and restrict unnecessary outbound network access.
+- Return generic client-facing errors while keeping detailed diagnostics in protected server logs.
+- Add regression tests confirming that external entity references cannot disclose files or trigger unauthorized network requests.
+
+## Limitations
+The official Juice Shop guide notes that its XXE challenges are unavailable in Docker deployments.
+
+https://help.owasp-juice.shop/part2/xxe.html
