@@ -1,0 +1,45 @@
+# Improper Input Validation Lab Report
+
+## Vulnerability
+**Improper Input Validation**
+
+## Challenge
+**Zero Stars**
+
+## Application
+**OWASP Juice Shop**
+
+## Target
+```text
+http://localhost:3000
+```
+
+## Tool Used
+**Burp Suite Repeater**
+
+## Endpoint Tested
+```http
+POST /api/Feedbacks/
+```
+
+## Objective
+
+The objective of this test was to determine whether OWASP Juice Shop properly validates feedback ratings on the server side or relies only on restrictions provided by the user interface.
+
+## Test Procedure
+
+1. OWASP Juice Shop was opened on the local machine.
+
+2. The feedback page was accessed and a normal feedback submission was made.
+
+3. The feedback request was captured using Burp Suite.
+
+4. The request was identified as:
+
+```http
+POST /api/Feedbacks/
+```
+
+5. The captured request was sent to **Burp Suite Repeater** so that the request parameters could be modified manually.
+
+6.
