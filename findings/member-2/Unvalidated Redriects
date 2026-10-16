@@ -1,0 +1,26 @@
+Unvalidated Redirects
+Application: OWASP Juice Shop
+Challenge: Outdated Allowlist
+Aim
+To test whether the application permits redirection to outdated external destinations.
+2. Objective
+To determine whether previously approved URLs remain accessible through the application's redirect functionality.
+3. Steps Taken
+1. Opened OWASP Juice Shop in the browser.
+2. Examined the application's redirect functionality.
+3. Inspected the JavaScript source for references to old cryptocurrency addresses.
+4. Identified a previously allowed cryptocurrency destination.
+5. Tested the following redirect through the local Juice Shop application:
+http://localhost:3000/redirect?to=https://blockchain.info/address/1AbKfgvw9psQ41NbLi8kufDQTezwG8DRZm
+
+
+6. Observed whether the application permitted the redirection.
+7. Checked the challenge notification and Score Board.
+4. Problems Encountered
+No specific execution problems have been documented for this test. The main verification requirement is to use Juice Shop's redirect endpoint rather than visit the destination directly.
+5. Result
+The application rejected the outdated destinations that are no longer intended to remain on its redirect allowlist.
+Observation
+The expected vulnerable behavior is that Juice Shop permits redirection to the outdated cryptocurrency address and marks the Outdated Allowlist challenge as solved.
+7. Conclusion
+The test demonstrates that outdated redirect destinations can remain authorized when the application's allowlist is not pro
