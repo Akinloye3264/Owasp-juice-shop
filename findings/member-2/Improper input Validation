@@ -1,0 +1,75 @@
+# Improper Input Validation Test
+
+## Test Environment
+
+**Application:** OWASP Juice Shop  
+**Target:** `http://localhost:3000`  
+**Testing Tool:** Burp Suite  
+**Burp Suite Feature Used:** Repeater  
+**Vulnerability Category:** Improper Input Validation  
+**Challenge:** Zero Stars
+
+## Objective
+
+The purpose of the test was to determine whether OWASP Juice Shop properly validates the rating value submitted through its feedback functionality.
+
+The application normally expects a valid star rating from the options provided through the user interface. The test attempted to bypass this client-side restriction by manually modifying the HTTP request before sending it to the server.
+
+## Procedure
+
+1. OWASP Juice Shop was opened locally at:
+
+```text
+http://localhost:3000
+```
+
+2. The feedback functionality was used to generate a legitimate feedback request.
+
+3. The request was captured in Burp Suite.
+
+4. The relevant HTTP request was identified as:
+
+```http
+POST /api/Feedbacks/
+```
+
+5. Because the request in Burp Suite HTTP History was read-only, it was sent to **Repeater** for modification.
+
+6. The JSON request body contained a rating value similar to:
+
+```json
+{
+  "rating": 2
+}
+```
+
+7. The rating parameter was manually changed to:
+
+```json
+{
+  "rating": 0
+}
+```
+
+8. The modified request was then sent from Burp Suite Repeater.
+
+## What the Test Was Checking
+
+The normal Juice Shop interface does not provide a **zero-star** rating option.
+
+Therefore, a value of:
+
+```text
+rating = 0
+```
+should be rejected by proper server-side validation.
+
+The test specifically checked whether the backend relied only on restrictions imposed by the frontend or independently validated the rating supplied in the HTTP request.
+
+## Security Principle Demonstrated
+
+This test demonstrates the difference between:
+
+**Client-side validation**
+
+The browser or application interface
