@@ -42,5 +42,5 @@ Testing took place against Juice Shop at `http://localhost:3000` inside a Kali L
 Keep application source and dependencies outside this reporting repository. Members add their own reports and screenshots on separate branches and open pull requests. Another member reviews each contribution before the lead combines the report. Replace member labels with actual names before submission.
 
 Group members:
-[Oladipo hezekiah](https://github.com/Soft-00)[
-Nelson Ojere]([url](https://github.com/rey484))
+[Oladipo hezekiah](https://github.com/Soft-00)
+[Nelson Ojere](https://github.com/rey484)
